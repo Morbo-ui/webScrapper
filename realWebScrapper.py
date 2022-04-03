@@ -4,7 +4,7 @@ import requests
 
 def find_jobs():
     print("Put a job, you\'re looking for")
-    name_job = input()
+    name_job = input('>')
     html_text = requests.get(f'https://career.habr.com/vacancies?q={name_job}&l=1&type=all').text
     soup = BeautifulSoup(html_text, 'lxml')
 
